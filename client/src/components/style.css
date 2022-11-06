@@ -30,7 +30,7 @@
     height: 45rem;
     width: 35rem;
     padding: 20px;
-    border-radius: 15px;
+    border-radius: 5px;
     box-shadow: 1px 5px 25px 2px black;
     overflow: scroll;
  }

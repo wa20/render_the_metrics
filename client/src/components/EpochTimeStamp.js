@@ -18,7 +18,7 @@ export default function EpochTimeStamp() {
           let time = res.data.epoch;
 
           time = new Date(time);
-          setState(time.toUTCString('ss'));
+          setState(time.toUTCString());
 
           setIsLoading(false);
         })
@@ -38,7 +38,7 @@ export default function EpochTimeStamp() {
         {isLoading ? <Spinner/> :<pre className="blockquote mb-0">{state}</pre>}
         
       </div>
-      <div className="card-footer text-muted">Difference:</div>
+            <div className="card-footer text-muted">Time of last metrics data request.</div>
     </div>
   );
 }

@@ -34,13 +34,9 @@ export default function RightPanel() {
   return (
     <>
       <div className="py-5">
-        <div className="black-board d-flex justify-content-center align-items-center">
-          
+        <div className="black-board d-flex justify-content-center align-items-center"> 
          
             {isLoading ? <Spinner/> :< pre>{state}</pre> }       
-       
-          
-
 
         </div>
       </div>
