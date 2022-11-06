@@ -1,12 +1,15 @@
 const express = require('express');
 const promMid = require('express-prometheus-middleware');
 const path = require('path');
+const cors = require('cors')
 
 const homeRoute = require('./routes/home')
 const timeRoute = require('./routes/time')
 
 const PORT = 3500
 const app = express();
+app.use(cors())
+
 
 // inesrting middleware
 app.use(express.json());
