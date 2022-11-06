@@ -24,6 +24,8 @@ app.use(function(req, res, next) {
   if (!req.headers.authorization && req.get["Authorization"] != "mysecrettoken") {
     return res.status(403).json({ error: "No credentials or incorrect credentials sent!" });
   }
+  
+  next()
 });
 
 
@@ -62,8 +64,5 @@ app.use(promMid({
   }));
 
 
-
-
-app.use('/', homeRoute);
 
 app.listen(PORT, console.log(`server listening on ${PORT}`));
