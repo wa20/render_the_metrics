@@ -11,7 +11,7 @@ export default function RightPanel() {
     useEffect(() => { 
       const interval = setInterval(() => { 
 
-        axios.get("http://localhost:3500/metrics")
+        axios.get("http://localhost:3500/metrics" , { headers: { 'Authorization': 'mysecrettoken' } })
         .then((res) => {
 
           const metrics = res.data;
