@@ -20,6 +20,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', homeRoute);
 app.use('/time', timeRoute);
 
+app.use(function(req, res, next) {
+  if (!req.headers.authorization && req.get["Authorization"] != "mysecrettoken") {
+    return res.status(403).json({ error: "No credentials or incorrect credentials sent!" });
+  }
+});
+
 
 app.use(promMid({
     metricsPath: '/metrics',
