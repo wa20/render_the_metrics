@@ -21,7 +21,7 @@ function App() {
         </div>
       </section>
 
-      <section class="orange-background">
+      <section className="orange-background">
        <img src={OrangeWave} alt="colored wave" width="100%"/>
       </section>
 
