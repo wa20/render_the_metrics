@@ -1,16 +1,20 @@
-import React from 'react';
-import "./style.css"
+import React from "react";
+import {useEffect, useState} from "react"
+import axios from "axios"
+import Spinner from "./Spinner";
+import EpochTimeStamp from "./EpochTimeStamp";
+import EpochTimeDiff from "./EpochTimeDiff";
+
 
 
 export default function LeftPanel() {
-    return (
-    <> 
+  const state = []
 
-        <div className=''>
-                <h2>Hello Left</h2>
-        </div>
+  return (
+    <div>
+      <EpochTimeStamp/>
+      {/* <EpochTimeDiff/> */}
+    </div>
     
-
-    </>
- )
+  );
 }
