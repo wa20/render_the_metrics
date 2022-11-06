@@ -3,7 +3,7 @@ import Header from "./components/Header";
 import RightPanel from "./components/RightPannel";
 import LeftPanel from "./components/LeftPannel";
 import Footer from "./components/Footer";
-import OrangeWave from './assets/orange-wave.jpg';
+import OrangeWave from "./assets/orange-wave.jpg";
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
 
       <section className="orange-background d-flex justify-content-center align-items-center">
         <div className="row container ">
-          <div className="col-12 col-md-6 d-flex justify-content-center">
+          <div className="col-12 col-md-6 d-flex justify-content-center flex-column">
             <LeftPanel />
           </div>
           <div className="col-12 col-md-6 d-flex justify-content-center align-items-center">
@@ -22,7 +22,7 @@ function App() {
       </section>
 
       <section className="orange-background">
-       <img src={OrangeWave} alt="colored wave" width="100%"/>
+        <img src={OrangeWave} alt="colored wave" width="100%" />
       </section>
 
       <section>

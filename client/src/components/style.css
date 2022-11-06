@@ -23,3 +23,14 @@
 .orange-background {
     background: #e19b66;
  }
+
+ .black-board {
+    background: rgb(33, 33, 33);
+    color: white;
+    height: 45rem;
+    width: 35rem;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 1px 5px 25px 2px black;
+    overflow: scroll;
+ }
