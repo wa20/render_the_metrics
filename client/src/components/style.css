@@ -1,3 +1,25 @@
+/* CSS Resets */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  ul,
+  ol {
+    list-style: none;
+  }
+  
+  a,
+      a:hover,
+      a:active,
+      a:visited {
+      text-decoration: none;
+       
+      }
+/* ------------ */
+
+
 .orange-background {
     background: #e19b66;
  }
