@@ -25,7 +25,7 @@ export default function EpochTimeStamp() {
         .catch((err) => {
           console.log(err);
         });
-    }, 3000);
+    }, 30000);
 
     return () => clearInterval(interval);
   }, []);

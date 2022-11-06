@@ -26,7 +26,7 @@ export default function RightPanel() {
           console.log(err);
           setState(err);
         });
-    }, 5000);
+    }, 30000);
 
     return () => clearInterval(interval);
   }, []);
