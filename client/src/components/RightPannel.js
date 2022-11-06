@@ -16,7 +16,7 @@ export default function RightPanel() {
 
           const metrics = res.data;
           setState(metrics)
-          this.setPosts({ metrics });
+  
           
         }).catch((err) => {
             console.log(err)
