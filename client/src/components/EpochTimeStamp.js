@@ -1,11 +1,14 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Spinner from "./Spinner";
 
 export default function EpochTimeStamp() {
   const [state, setState] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
+    setIsLoading(true)
     const interval = setInterval(() => {
       axios
         .get("http://localhost:3500/time", {
@@ -15,8 +18,9 @@ export default function EpochTimeStamp() {
           let time = res.data.epoch;
 
           time = new Date(time);
+          setState(time.toUTCString('ss'));
 
-          setState(time.toUTCString());
+          setIsLoading(false);
         })
         .catch((err) => {
           console.log(err);
@@ -30,7 +34,9 @@ export default function EpochTimeStamp() {
     <div className="card text-center">
       <div className="card-header fw-bold">Time Stamp: 30 Sec Intervals</div>
       <div className="card-body">
-        <pre className="blockquote mb-0">{state}</pre>
+
+        {isLoading ? <Spinner/> :<pre className="blockquote mb-0">{state}</pre>}
+        
       </div>
       <div className="card-footer text-muted">Difference:</div>
     </div>

@@ -1,26 +1,32 @@
 import React from "react";
 import { useEffect, useState } from "react";
+import Spinner from "./Spinner";
 import axios from "axios";
 import "./style.css";
 
 export default function RightPanel() {
   const [state, setState] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
+    setIsLoading(true)
+
     const interval = setInterval(() => {
       axios
         .get("http://localhost:3500/metrics", {
           headers: { Authorization: "mysecrettoken" },
         })
         .then((res) => {
+          
           const metrics = res.data;
           setState(metrics);
+          setIsLoading(false);
         })
         .catch((err) => {
           console.log(err);
           setState(err);
         });
-    }, 3000);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, []);
@@ -29,7 +35,13 @@ export default function RightPanel() {
     <>
       <div className="py-5">
         <div className="black-board d-flex justify-content-center align-items-center">
-          <pre>{state}</pre>
+          
+         
+            {isLoading ? <Spinner/> :< pre>{state}</pre> }       
+       
+          
+
+
         </div>
       </div>
     </>
