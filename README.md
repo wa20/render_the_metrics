@@ -58,7 +58,7 @@ n/a
 
 ## Author
 - wael ahmed
-- Find the repo for this on: (https://github.com/wa20/Readme Generator/).
+- Find the repo for this on: (https://github.com/wa20/render_the_metrics).
 - If you have any questions about the repo, open an issue or contact me directly through my github
 - You can find more of my work at [wa20](https://github.com/wa20/render_the_metrics).
 
