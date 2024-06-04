@@ -1,10 +1,15 @@
 
-  # Readme Generator
+  # Render The Metrics
   ![Github license](https://img.shields.io/badge/license-MIT-blue.svg)
 
   ## Description
 
  The task is to build a simple API, and frontend application for displaying the data returned by the API.
+ 
+ Future Development: 
+ - Fetching EPOCH time in 00:00:00 format
+ - Improving Countdown counter
+ - improving way in time difference is calaculated
 
   ## Contents Table
   - [Installation](#Installation)
@@ -53,8 +58,8 @@ n/a
 
 ## Author
 - wael ahmed
-- Find the repo for this on: (https://github.com/wa20/Readme Generator/).
+- Find the repo for this on: (https://github.com/wa20/render_the_metrics).
 - If you have any questions about the repo, open an issue or contact me directly through my github
-- You can find more of my work at [wa20](https://github.com/wa20/render_the_metrics).
+- You can find more of my work at [wa20](https://github.com/wa20).
 
  
