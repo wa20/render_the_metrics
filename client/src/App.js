@@ -12,10 +12,10 @@ function App() {
 
       <section className="orange-background d-flex justify-content-center align-items-center">
         <div className="row container ">
-          <div className="col-12 col-md-6 d-flex justify-content-center flex-column">
+          <div className="col-12 col-md-4 d-flex justify-content-center flex-column">
             <LeftPanel />
           </div>
-          <div className="col-12 col-md-6 d-flex justify-content-center align-items-center">
+          <div className="col-12 col-md-8 d-flex justify-content-center align-items-center">
             <RightPanel />
           </div>
         </div>
