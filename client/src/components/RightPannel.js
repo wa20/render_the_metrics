@@ -20,13 +20,16 @@ export default function RightPanel() {
           
           const metrics = res.data;
           setState(metrics);
+
+          console.log(metrics)
+
           setIsLoading(false);
         })
         .catch((err) => {
           console.log(err);
           setState(err);
         });
-    }, 30000);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, []);

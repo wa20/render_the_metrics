@@ -16,16 +16,16 @@ export default function EpochTimeStamp() {
         })
         .then((res) => {
           let time = res.data.epoch;
-
+          console.log("time:", time)
           time = new Date(time);
+          console.log("time now:", time)
           setState(time.toUTCString());
-
           setIsLoading(false);
         })
         .catch((err) => {
           console.log(err);
         });
-    }, 30000);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, []);

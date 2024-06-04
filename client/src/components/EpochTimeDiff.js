@@ -3,8 +3,8 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 export default function EpochTimeDiff() {
-  const [state, setState] = useState([])
-  const [difference, setDifference] = useState([]);
+  const [state, setState] = useState([0])
+  const [difference, setDifference] = useState([0]);
 
 
 
